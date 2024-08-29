@@ -1,11 +1,14 @@
 public class BankAccount {
+    private String id;
     private double balance;
 
-    public BankAccount() {
+    public BankAccount(String id, double balance) {
+        this.id = id;
+        this.balance = balance;
     }
 
-    public BankAccount(double balance) {
-        this.balance = balance;
+    public String getId() {
+        return id;
     }
 
     public double getBalance() {
@@ -36,10 +39,6 @@ public class BankAccount {
         }
         balance -= amount;
         System.out.println("Withdrawal complete: " + amount);
-    }
-
-    public void printBalance(){
-        System.out.println("balance: " + balance);
     }
 
     public void transfer(double amount, BankAccount targetAccount) {
